@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://iliesaya.github.io/atom.xml" rel="self"/>
   <link href="http://iliesaya.github.io/"/>
-  <updated>2014-01-05T23:07:23+01:00</updated>
+  <updated>2014-01-05T23:20:22+01:00</updated>
   <id>http://iliesaya.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,19 +14,14 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Zombie Ninjas Attack A Survivors Retrospective]]></title>
+    <title type="html"><![CDATA[Zombie Ninjas Attack: A survivor's retrospective]]></title>
     <link href="http://iliesaya.github.io/blog/2014/01/05/zombie-ninjas-attack-a-survivors-retrospective/"/>
-    <updated>2014-01-05T00:00:00+01:00</updated>
+    <updated>2014-01-05T22:26:15+01:00</updated>
     <id>http://iliesaya.github.io/blog/2014/01/05/zombie-ninjas-attack-a-survivors-retrospective</id>
-    <content type="html"><![CDATA[<p>﻿&mdash;&ndash;
-layout: post
-title: &ldquo;Zombie Ninjas Attack: A survivor&rsquo;s retrospective&rdquo;
-date: 2014-01-05 22:26:15 +0100
-comments: true</p>
+    <content type="html"><![CDATA[<p><img class="img" src="http://farm4.staticflickr.com/3749/9616934444_2b0616cc59_b.jpg"></p>
 
-<h2>categories: </h2>
+<p><a href="http://www.flickr.com/photos/-macjasp/9616934444/">Super Hot</a> &bull; Exposure (1/2358) &bull; Aperture f/2.4 &bull; Focal Length 4.1mm &bull; ISO 50</p>
 
-<p>lolololololololol</p>
 ]]></content>
   </entry>
   
