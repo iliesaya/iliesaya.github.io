@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Hugo Kiss theme</title>
-    <link>https://example.com/posts/</link>
-    <description>Recent content in Posts on Hugo Kiss theme</description>
+    <title>Posts on ayachips</title>
+    <link>http://iliesaya.github.io/posts/</link>
+    <description>Recent content in Posts on ayachips</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/ribice&#34;&gt;Emir Ribic&lt;/a&gt; 2017</copyright>
     <lastBuildDate>Sun, 08 Sep 2019 17:23:18 +0300</lastBuildDate>
     
-	<atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://iliesaya.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>My First Post</title>
-      <link>https://example.com/posts/my-first-post/</link>
+      <title>Tensorflow not initializing during riaps deployment</title>
+      <link>http://iliesaya.github.io/posts/tensorflow_riaps_jetson/</link>
       <pubDate>Sun, 08 Sep 2019 17:23:18 +0300</pubDate>
       
-      <guid>https://example.com/posts/my-first-post/</guid>
-      <description>COUCOU
-tests 2</description>
+      <guid>http://iliesaya.github.io/posts/tensorflow_riaps_jetson/</guid>
+      <description>Strange error cannot allocate memory in static TLS block under riaps plateform I am deploying on an nvidia Jetson Xavier a Tensorflow / Keras application (tensorflow-gpu==1.13.1+nv19.5).
+If I launch my python code outside riaps, it&amp;rsquo;s working , no error. But when I deploy it with riaps_ctrl and launch it, here is the result :
+ &amp;lt;class &#39;ImportError&#39;&amp;gt;: Traceback (most recent call last): File &amp;quot;/usr/local/lib/python3.6/dist-packages/tensorflow/python/pywrap_tensorflow.py&amp;quot;, line 58, in &amp;lt;module&amp;gt; from tensorflow.</description>
     </item>
     
   </channel>

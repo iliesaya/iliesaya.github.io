@@ -1,22 +1,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo Kiss theme</title>
-    <link>https://example.com/</link>
-    <description>Recent content on Hugo Kiss theme</description>
+    <title>ayachips</title>
+    <link>http://iliesaya.github.io/</link>
+    <description>Recent content on ayachips</description>
     <generator>Hugo - gohugo.io</generator>
     <language>en</language>
-    <contact>ribice@gmail.com</contact>
-    <copyright>&copy; <a href="https://github.com/ribice">Emir Ribic</a> 2017</copyright>
+    <contact></contact>
+    <copyright></copyright>
     
-        <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://iliesaya.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog</title>
-      <link>https://example.com/blog/</link>
+      <link>http://iliesaya.github.io/blog/</link>
       <pubDate>Sun, 08 Sep 2019 17:44:17 +0300</pubDate>
-      <author>Emir Ribic</author>
-      <guid>https://example.com/blog/</guid>
+      <author>Mohammed-iliès Ayachi</author>
+      <guid>http://iliesaya.github.io/blog/</guid>
       <description></description>
       
       <content></content>
@@ -25,10 +25,10 @@
     
     <item>
       <title>Posts</title>
-      <link>https://example.com/posts/</link>
+      <link>http://iliesaya.github.io/posts/</link>
       <pubDate>Sun, 08 Sep 2019 17:23:18 +0300</pubDate>
-      <author>Emir Ribic</author>
-      <guid>https://example.com/posts/</guid>
+      <author>Mohammed-iliès Ayachi</author>
+      <guid>http://iliesaya.github.io/posts/</guid>
       <description></description>
       
       <content></content>

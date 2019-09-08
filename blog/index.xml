@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Hugo Kiss theme</title>
-    <link>https://example.com/blog/</link>
-    <description>Recent content in Blog on Hugo Kiss theme</description>
+    <title>Blog on ayachips</title>
+    <link>http://iliesaya.github.io/blog/</link>
+    <description>Recent content in Blog on ayachips</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/ribice&#34;&gt;Emir Ribic&lt;/a&gt; 2017</copyright>
     <lastBuildDate>Sun, 08 Sep 2019 17:44:17 +0300</lastBuildDate>
     
-	<atom:link href="https://example.com/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://iliesaya.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
