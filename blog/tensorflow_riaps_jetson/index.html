@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>
+      
+          Tensorflow not initializing during riaps deployment - Ayachips
+      
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ayachips" />
+  <link rel="shortcut icon" type="image/x-icon" href="http://iliesaya.github.io/img/favicon.ico">
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="http://iliesaya.github.io/style.min.a6cab246517742ad1189b209575fc61556550e663cdfe02a0aab0632b39e978b.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  
+  
+
+  <meta property="og:title" content="Tensorflow not initializing during riaps deployment" />
+<meta property="og:description" content="Strange error cannot allocate memory in static TLS block under riaps plateform I am deploying on an nvidia Jetson Xavier a Tensorflow / Keras application (tensorflow-gpu==1.13.1&#43;nv19.5).
+If I launch my python code outside riaps, it&rsquo;s working , no error. But when I deploy it with riaps_ctrl and launch it, here is the result :
+ &lt;class &#39;ImportError&#39;&gt;: Traceback (most recent call last): File &quot;/usr/local/lib/python3.6/dist-packages/tensorflow/python/pywrap_tensorflow.py&quot;, line 58, in &lt;module&gt; from tensorflow." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://iliesaya.github.io/blog/tensorflow_riaps_jetson/" />
+<meta property="article:published_time" content="2019-09-08T17:23:18+03:00" />
+<meta property="article:modified_time" content="2019-09-08T17:23:18+03:00" />
+<meta itemprop="name" content="Tensorflow not initializing during riaps deployment">
+<meta itemprop="description" content="Strange error cannot allocate memory in static TLS block under riaps plateform I am deploying on an nvidia Jetson Xavier a Tensorflow / Keras application (tensorflow-gpu==1.13.1&#43;nv19.5).
+If I launch my python code outside riaps, it&rsquo;s working , no error. But when I deploy it with riaps_ctrl and launch it, here is the result :
+ &lt;class &#39;ImportError&#39;&gt;: Traceback (most recent call last): File &quot;/usr/local/lib/python3.6/dist-packages/tensorflow/python/pywrap_tensorflow.py&quot;, line 58, in &lt;module&gt; from tensorflow.">
+
+
+<meta itemprop="datePublished" content="2019-09-08T17:23:18&#43;03:00" />
+<meta itemprop="dateModified" content="2019-09-08T17:23:18&#43;03:00" />
+<meta itemprop="wordCount" content="400">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tensorflow not initializing during riaps deployment"/>
+<meta name="twitter:description" content="Strange error cannot allocate memory in static TLS block under riaps plateform I am deploying on an nvidia Jetson Xavier a Tensorflow / Keras application (tensorflow-gpu==1.13.1&#43;nv19.5).
+If I launch my python code outside riaps, it&rsquo;s working , no error. But when I deploy it with riaps_ctrl and launch it, here is the result :
+ &lt;class &#39;ImportError&#39;&gt;: Traceback (most recent call last): File &quot;/usr/local/lib/python3.6/dist-packages/tensorflow/python/pywrap_tensorflow.py&quot;, line 58, in &lt;module&gt; from tensorflow."/>
+
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-147409841-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</head>
+
+  <body>
+    
+  <h1>Tensorflow not initializing during riaps deployment</h1>
+  <header>
+  
+  <div class="avatar">
+    <img class="avatarMask" src="http://iliesaya.github.io//img/avatar.jpg">
+    <a href="http://iliesaya.github.io/"><img src="http://iliesaya.github.io//img/avatar-border.svg"></a>
+  </div>
+  
+  <h2><a class="author" href="http://iliesaya.github.io/">Ayachips</a></h2>
+</header>
+
+  
+  
+  <p class="date">September 8, 2019</p>
+  
+  <div id="contentBody">
+    
+
+<h1 id="strange-error-cannot-allocate-memory-in-static-tls-block-under-riaps-plateform">Strange error cannot allocate memory in static TLS block under riaps plateform</h1>
+
+<p>I am deploying on an nvidia Jetson Xavier a Tensorflow / Keras application <em>(tensorflow-gpu==1.13.1+nv19.5)</em>.</p>
+
+<p>If I launch my python code outside riaps, it&rsquo;s working , no error. But when I deploy it with riaps_ctrl and launch it, here is the result :</p>
+
+<pre><code>
+&lt;class 'ImportError'&gt;: Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.6/dist-packages/tensorflow/python/pywrap_tensorflow.py&quot;, line 58, in &lt;module&gt;
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File &quot;/usr/local/lib/python3.6/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py&quot;, line 28, in &lt;module&gt;
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File &quot;/usr/local/lib/python3.6/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py&quot;, line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File &quot;/usr/lib/python3.6/imp.py&quot;, line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File &quot;/usr/lib/python3.6/imp.py&quot;, line 343, in load_dynamic
+    return _load(spec)
+ImportError: /usr/lib/aarch64-linux-gnu/libgomp.so.1: cannot allocate memory in static TLS block
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/errors
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.6/dist-packages/tensorflow/python/pywrap_tensorflow.py&quot;, line 58, in &lt;module&gt;
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File &quot;/usr/local/lib/python3.6/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py&quot;, line 28, in &lt;module&gt;
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File &quot;/usr/local/lib/python3.6/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py&quot;, line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File &quot;/usr/lib/python3.6/imp.py&quot;, line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File &quot;/usr/lib/python3.6/imp.py&quot;, line 343, in load_dynamic
+    return _load(spec)
+ImportError: /usr/lib/aarch64-linux-gnu/libgomp.so.1: cannot allocate memory in static TLS block
+
+</code></pre>
+
+<p>Impossible to update the jetson tensorflow version, because cudnn installed version is 7.3.1 and I don&rsquo;t want to re-flash the device and lose all my riaps installation. If I use a more recent version of tensorflow I have this error:</p>
+
+<pre><code>Loaded runtime CuDNN library: 7.3.1 but source was compiled with: 7.5.0
+
+</code></pre>
+
+<p>The solution I found is to move the Tensorflow include at the very top of the python code :</p>
+
+<pre><code>import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.layers import GlobalAveragePooling2D, ZeroPadding2D, MaxPooling2D, Flatten, Dense, Input, Dropout, Conv2D, BatchNormalization, MaxPool2D, Activation
+from tensorflow.keras.models import Model, Sequential
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.layers import MaxPooling1D, Conv1D, GlobalAveragePooling1D, Reshape
+
+
+from riaps.run.comp import Component
+import logging
+from random import random
+import time as t
+
+from time import mktime
+from datetime import datetime
+import numpy as np
+
+from sklearn import preprocessing
+from sklearn.preprocessing import normalize
+
+</code></pre>
+
+<p>If the import tensorflow are after the sklearn import, it&rsquo;s not working.
+This page gave me the hint : <a href="https://www.mail-archive.com/python-devel@lists.fedoraproject.org/msg01516.html">https://www.mail-archive.com/python-devel@lists.fedoraproject.org/msg01516.html</a></p>
+
+<p>I think this bug is specific to the version of tensorflow I have on the jetson because the raspberry pi doesn&rsquo;t have this issue.</p>
+
+  </div>
+  <footer>
+  <p>
+  &copy; 2019 Ayachips.
+  Powered by <a href="https://gohugo.io/">Hugo</a>
+  using the <a href="https://github.com/koirand/pulp/">pulp</a> theme.
+  </p>
+</footer>
+
+
+  </body>
+</html>

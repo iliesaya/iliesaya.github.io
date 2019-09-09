@@ -1,38 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ayachips</title>
+    <title>Ayachips</title>
     <link>http://iliesaya.github.io/</link>
-    <description>Recent content on ayachips</description>
-    <generator>Hugo - gohugo.io</generator>
-    <language>en</language>
-    <contact></contact>
-    <copyright></copyright>
+    <description>Recent content on Ayachips</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 08 Sep 2019 17:23:18 +0300</lastBuildDate>
     
-        <atom:link href="http://iliesaya.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://iliesaya.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Blog</title>
-      <link>http://iliesaya.github.io/blog/</link>
-      <pubDate>Sun, 08 Sep 2019 17:44:17 +0300</pubDate>
-      <author>Mohammed-iliès Ayachi</author>
-      <guid>http://iliesaya.github.io/blog/</guid>
-      <description></description>
-      
-      <content></content>
-      
-    </item>
-    
-    <item>
-      <title>Posts</title>
-      <link>http://iliesaya.github.io/posts/</link>
+      <title>Tensorflow not initializing during riaps deployment</title>
+      <link>http://iliesaya.github.io/blog/tensorflow_riaps_jetson/</link>
       <pubDate>Sun, 08 Sep 2019 17:23:18 +0300</pubDate>
-      <author>Mohammed-iliès Ayachi</author>
-      <guid>http://iliesaya.github.io/posts/</guid>
-      <description></description>
       
-      <content></content>
-      
+      <guid>http://iliesaya.github.io/blog/tensorflow_riaps_jetson/</guid>
+      <description>Strange error cannot allocate memory in static TLS block under riaps plateform I am deploying on an nvidia Jetson Xavier a Tensorflow / Keras application (tensorflow-gpu==1.13.1+nv19.5).
+If I launch my python code outside riaps, it&amp;rsquo;s working , no error. But when I deploy it with riaps_ctrl and launch it, here is the result :
+ &amp;lt;class &#39;ImportError&#39;&amp;gt;: Traceback (most recent call last): File &amp;quot;/usr/local/lib/python3.6/dist-packages/tensorflow/python/pywrap_tensorflow.py&amp;quot;, line 58, in &amp;lt;module&amp;gt; from tensorflow.</description>
     </item>
     
   </channel>

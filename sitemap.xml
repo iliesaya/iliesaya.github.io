@@ -3,27 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://iliesaya.github.io/blog/</loc>
-    <lastmod>2019-09-08T17:44:17+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://iliesaya.github.io/</loc>
     <lastmod>2019-09-08T17:23:18+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://iliesaya.github.io/posts/</loc>
+    <loc>http://iliesaya.github.io/blog/</loc>
     <lastmod>2019-09-08T17:23:18+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://iliesaya.github.io/posts/tensorflow_riaps_jetson/</loc>
+    <loc>http://iliesaya.github.io/blog/tensorflow_riaps_jetson/</loc>
     <lastmod>2019-09-08T17:23:18+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://iliesaya.github.io/tags/</loc>
+    <loc>http://iliesaya.github.io/series/</loc>
   </url>
   
 </urlset>
